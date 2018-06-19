@@ -71,9 +71,7 @@ elseif strcmp(modality,'multimodal')
     figure();
     imshowpair(movingRegisteredRigid, fixed);
     title('Registration Based on Similarity Transformation Model')
-%     figure();
-%     imshowpair(movingRegisteredAdjustedInitialRadius300, movingRegisteredRigid,'montage')
-%     title('Affine (L) vs. Similarity (R)')
+    
 else
     disp('Modality not valid. Only monomodal or multimodal.');
     registered = [];
