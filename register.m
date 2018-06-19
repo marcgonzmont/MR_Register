@@ -11,7 +11,7 @@ if strcmp(modality,'monomodal')
     
     % Get optimizer and metric based on modality.
     % Here optimizer  is RegularStepGradientDescent
-    [optimizer,metric] = imregconfig(modality)
+    [optimizer,metric] = imregconfig(modality);
     tformSimilarity = imregtform(moving,fixed,'similarity',optimizer,metric);
     % Get coordinates of fixed image
     Rfixed = imref2d(size(fixed));
@@ -35,7 +35,7 @@ elseif strcmp(modality,'multimodal')
     
     % Get optimizer and metric based on modality.
     % Here optimizer  is  OnePlusOneEvolutionary
-    [optimizer,metric] = imregconfig(modality)
+    [optimizer,metric] = imregconfig(modality);
     % Register images
     movingRegisteredDefault = imregister(moving,fixed,'affine',optimizer,metric);
     % Show result
